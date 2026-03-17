@@ -88,13 +88,13 @@ app.use('/', async function (req, res) {
 
 		switch (payload.tier_name) {
 			case 'Silver':
-				embed.setColor('#797979');
+				embed.setColor('#5865F2');
 			case 'Gold:':
-				embed.setColor('#ffc530');
+				embed.setColor('#5865F2');
 			case 'Platinum':
-				embed.setColor('#2ed5ff');
+				embed.setColor('#5865F2');
 			default:
-				embed.setColor('#9b59b6');
+				embed.setColor('#5865F2');
 		}
 
 		embed.addField(`From`, `${payload.from_name}`, true);
