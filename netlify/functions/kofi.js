@@ -81,8 +81,8 @@ app.use('/', async function (req, res) {
 	try {
 		const embed = new MessageBuilder();
 
-		embed.setAuthor('Ko-fi', 'https://i.imgur.com/J0egcX2.png');
-		embed.setThumbnail('https://i.imgur.com/J0egcX2.png');
+		embed.setAuthor('Ko-fi', 'https://storage.ko-fi.com/cdn/brandasset/kofi_s_logo_nolabel.png');
+        embed.setThumbnail('https://storage.ko-fi.com/cdn/brandasset/kofi_s_logo_nolabel.png');
 		embed.setTitle('New supporter on Ko-fi ☕');
 		if (kofi_username) embed.setURL(`https://ko-fi.com/${kofi_username}`);
 
@@ -102,10 +102,10 @@ app.use('/', async function (req, res) {
 		embed.addField(`Amount`, `${payload.amount} ${payload.currency}`, true);
 		if (payload.message && payload.message !== 'null')
 			embed.addField(`Message`, `${payload.message}`);
-		embed.setFooter(
-			`Thank you for supporting us!`,
-			`https://github.githubassets.com/images/modules/site/icons/funding_platforms/ko_fi.svg`
-		);
+    embed.setFooter(
+      `Thank you for supporting us!`,
+      `https://storage.ko-fi.com/cdn/brandasset/kofi_s_logo_nolabel.png`
+    );
 		embed.setTimestamp();
 
 		await webhook.send(embed);
